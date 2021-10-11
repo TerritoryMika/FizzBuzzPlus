@@ -25,10 +25,16 @@ if mod 3 has no remainder, print "Fizz!"
 ```
 a condition can be seen as
 ```
-n[|r]:p
-if [current value] mod {n} ,remainder = {r}, print {p}
+n:p
+// if current value mod {n}, remainder = 0, print {p}
+n|r:p
+// if current value mod {n}, remainder = {r}, print {p}
+n:p$x$
+// if current value mod {n}, remainder = 0, print {p}, maximum of {x} times
+n|r:p$x$
+// if current value mod {n}, remainder = {r}, print {p}, maximum of {x} times
 ```
-for instance, `15:FizzBuzz!` means *if mod 15 has no remainder, print "FizzBuzz!"* and `7|2:Monkey!`  means *if mod 7, remainder equals 2, print "Monkey!"*
+for instance, `15:FizzBuzz!` means *mod 15 has no remainder, print "FizzBuzz!"* and `7|2:Monkey!`  means *mod 7, remainder equals 2, print "Monkey!"*
 
 
 *\*note that "FizzBuzz!" will override "Buzz!" and "Fizz!" as it is in higher position*
@@ -42,9 +48,10 @@ here is a few thing i implemented :
 `&` can connect the expression part and the string part
 
 
+
 ## Explanation for example
 
-here are few example i writen in `FizzBuzz+`
+here are few example i written in `FizzBuzz+`
 
 ### [Hello, World!](https://esolangs.org/wiki/Hello,_world!)
 ```
@@ -57,18 +64,25 @@ here are few example i writen in `FizzBuzz+`
 ```
 *\*just put in a large number and pretend it is infinite*
 
-### Double Up
+### Even number (Usage of $)
+```
+4:I am a even number larger than 2!
+2:I am 2!$1$
+4|2:I am a even number larger than 2!
+```
+
+### Double Up (Usage of ~)
 ```
 1:~+~
 ```
 
-### End
+### End (Usage of ^)
 ```
 ^:this is the end of the program, bye bye!
 ```
 
 ### [99 bottles of beer](https://esolangs.org/wiki/99_bottles_of_beer)
 ```
-^:1 bottle of beer on the wall,\n1 bottle of beer.\nTake one down, pass it around,\nNo bottles of beer on the wall.
-1:(^-~)& bottles of beer on the wall,\n&(^-~)& bottles bottle of beer.\nTake one down, pass it around,\n&(^-~)& bottles bottles of beer on the wall.
+^:1 bottle of beer on the wall,\n1 bottle of beer.\nTake one down, pass it around,\nNo bottle of beer on the wall.
+1:(^-~)& bottles of beer on the wall,\n&(^-~)& bottle of beer.\nTake one down, pass it around,\n&(^-~)& bottles of beer on the wall.
 ```
