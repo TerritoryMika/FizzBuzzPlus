@@ -64,9 +64,9 @@ class Condition{
 
     public boolean check(int n, int m){
         if(n % v != r) return false;
-        System.out.println(p.replace("`", String.valueOf(m)).replace("~", String.valueOf(n)));
+        System.out.println(p.replace("^", String.valueOf(m)).replace("~", String.valueOf(n)));
 		// '~' in Output will be changed to the current value
-		// '`' in Output will be changed to the max value
+		// '^' in Output will be changed to the max value
         return true;
     }
 }
