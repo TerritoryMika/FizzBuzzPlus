@@ -12,12 +12,13 @@ public class Main {
 	
     public static void main(String[] args) {
     	try {
-    		read(args[0]);
-			execute(Integer.valueOf(args[1]));
-		} catch (FileNotFoundException e) { e.printStackTrace();}
+    		read(args[0]);				// Read the file
+		execute(Integer.valueOf(args[1]));	// Determine the max value
+							// For instance, "java - jar FizzBuzzPlus.jar basic 100"
+	} catch (FileNotFoundException e) { e.printStackTrace();}
     }
     
-    public static void read(String str) throws FileNotFoundException {
+    public static void read(String str) throws FileNotFoundException {	// load the program from the file to an ArrayList
     	s = new Scanner(new File(str));
 
     	while(s.hasNextLine()) 
@@ -30,11 +31,11 @@ public class Main {
         	b:
         	for(int n = 1; n <= m; n++) {
         		for(Condition c : program)
-        			if(c.check(n,m)) continue b;
+        			if(c.check(n,m)) continue b;	// check if the current value matchs any Conditions
         		System.out.println(n);
         	}
         }else {
-        	System.out.println(m);
+        	System.out.println(m);	// if the maximum is less than 0, print it and halt
         }
     }
 
@@ -42,10 +43,13 @@ public class Main {
 }
 
 class Condition{
-    public int v;
-    public int r = 0;
-    public String p;
-
+    public int v;	// Value
+    public int r = 0;	// Remainder 
+    public String p;	// Print
+			// v[|r]:p
+			// "3:Fizz!"		-> when mod 3 equals 0, print "Fizz!"
+			// "7|2:Monkey!"	-> when mod 7 equals 2, print "Monkey!"
+	
     public Condition(String z){
         String[] temp = z.split(":|\\|");
         if(temp.length == 2){
@@ -61,6 +65,8 @@ class Condition{
     public boolean check(int n, int m){
         if(n % v != r) return false;
         System.out.println(p.replace("`", String.valueOf(m)).replace("~", String.valueOf(n)));
+		// '~' in Output will be changed to the current value
+		// '`' in Output will be changed to the max value
         return true;
     }
 }
