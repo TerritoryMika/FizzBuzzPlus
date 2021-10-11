@@ -1,11 +1,12 @@
 # FizzBuzz+
+![stolen from google](https://code.kx.com/q/img/fizzbuzz.png)
 
 Have you been asked for doing FizzBuzz during interview?
 
 well, not for me
-cause i am still at school lol
+cause i am still a student lol
 
-Anyway, `FizzBuzz+` is a language where it's only function is to do FizzBuzz!
+Anyway, `FizzBuzz+` is a language where its only function is to do FizzBuzz!
 
 not very exciting, right? yea this is just a bad joke ending up wasting 15 mins of my life lol
 
@@ -25,4 +26,9 @@ if mod 3 has no remainder, print "Fizz!"
 ```
 note that "FizzBuzz!" will override "Buzz!" and "Fizz!" as it is in higher position
 
-also `~` and 
+also
+`~` can be used to represent current value
+and
+`^` can be used to represent the max value
+
+thats all that it got. have fun!
