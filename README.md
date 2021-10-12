@@ -86,3 +86,8 @@ here are few example i written in `FizzBuzz+`
 ^:1 bottle of beer on the wall,\n1 bottle of beer.\nTake one down, pass it around,\nNo bottle of beer on the wall.
 1:(^-~)& bottles of beer on the wall,\n&(^-~)& bottle of beer.\nTake one down, pass it around,\n&(^-~)& bottles of beer on the wall.
 ```
+
+## FAQ
+
+#### Why?
+idk, its just a unfunny joke lol
