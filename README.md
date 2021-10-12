@@ -4,11 +4,11 @@
 Have you been asked for doing FizzBuzz during interview?
 
 well, not for me
-cause i am still a student lol
+cause i am still a student
 
 Anyway, `FizzBuzz+` is a language where its only function is to do FizzBuzz!
 
-not very exciting, right? yea this is just a bad joke ending up wasting 15 mins of my life lol
+not very exciting, right? yea this is just a bad joke ending up wasting 15 mins of my life
 
 ## How to use
 
@@ -90,4 +90,4 @@ here are few example i written in `FizzBuzz+`
 ## FAQ
 
 #### Why?
-idk, its just a unfunny joke lol
+idk, its just a unfunny joke
